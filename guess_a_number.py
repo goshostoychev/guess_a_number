@@ -11,7 +11,6 @@ loop = True
 while loop:
     print(Fore.GREEN + "Welcome to Guess the number game!\n")
     difficulty = input(Fore.YELLOW + "Choose a difficulty level - Easy, Medium, or Hard: \n").lower()
-    max_attempts = 3
     computer_number = randint(1, 1)
 
     if difficulty == "easy":
@@ -21,7 +20,9 @@ while loop:
     elif difficulty == "hard":
         computer_number = randint(1, 300)
     else:
-        print(Fore.RED + "Invalid difficulty level. Playing on Easy.")
+        print(Fore.RED + "\nInvalid difficulty level. Playing on Easy.\n")
+
+    max_attempts = int(input("Choose number of attempts:\n"))
 
     attempts = 0
 
